@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	
+	<title>Fotopułapka</title>
+	
+	<meta name="description" content="Serwis o starych grach pochodzących z Nintendo Entertainment System" />
+	<meta name="keywords" content="gry, komputerowe, retro, nes, konsole, retrogranie, stare gry" />
+	
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	
+	<link href="css/fontello.css" rel="stylesheet" type="text/css" />
+	
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<div class="header">
+		
+			<div class="logo">
+				<img src="pad.png" style="float: left;"/>
+				<span style="color: #c34f4f"></span>Fotopułapka
+				<div style="clear:both;"></div>
+			</div>
+		</div>
+		<div class="nav">
+			<ol>
+				<li><a href="#">Strona główna</a></li>
+				<li><a href="#">Panel logowania</a>
+					<ul>
+						<li><a href="#">Administrator</a></li>
+						<li><a href="#">User</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Informacje</a>
+					<ul>
+						<li><a href="#">---</a></li>
+						<li><a href="#">---</a></li>
+						<li><a href="#">---</a></li>
+						<li><a href="#">---</a></li>
+					</ul>
+				</li>
+				<li><a href="#">System działania</a>
+					<ul>
+						<li><a href="#">---</a></li>
+						<li><a href="#">---</a></li>
+						<li><a href="#">---</a></li>
+						<li><a href="#">---</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Pliki</a>
+					<ul>
+						<li><a href="#">---</a></li>
+						<li><a href="#">---</a></li>
+						<li><a href="#">---</a></li>
+						<li><a href="#">---</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Zapas</a>
+					<ul>
+						<li><a href="#">---</a></li>
+						<li><a href="#">---</a></li>
+						<li><a href="#">---</a></li>
+						<li><a href="#">---</a></li>
+					</ul>
+				</li>
+				        
+			</ol>
+		
+		</div>
+		
+		<div class="content">
+			
+		</div>
+		
+		
+	</div>
+	
+	<script src="jquery-1.11.3.min.js"></script>
+	
+	<script>
+
+	$(document).ready(function() {
+	var NavY = $('.nav').offset().top;
+	 
+	var stickyNav = function(){
+	var ScrollY = $(window).scrollTop();
+		  
+	if (ScrollY > NavY) { 
+		$('.nav').addClass('sticky');
+	} else {
+		$('.nav').removeClass('sticky'); 
+	}
+	};
+	 
+	stickyNav();
+	 
+	$(window).scroll(function() {
+		stickyNav();
+	});
+	});
+	
+</script>
+	
+</body>
+</html>
